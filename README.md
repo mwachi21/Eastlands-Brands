@@ -1,2 +1,4 @@
 # Eastlands-Brands
-Portfolio Website to showcase Branding projects
+Portfolio Website to showcase :
+- Services Offered
+- Completed and Ongoing Branding projects
