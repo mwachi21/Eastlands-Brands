@@ -1,0 +1,122 @@
+/* Global Variables */
+:root {
+    --background-color: #e6f6fd;
+    --text-color: #00111a;
+    --switch-bg: #cccccc;
+    --switch-active-bg: #4caf50;
+    --switch-handle: #ffffff;
+  }
+  
+  .dark-theme {
+    --background-color: #00111a;
+    --text-color: #e6f6fd;
+    --switch-bg: #929292;
+    --switch-active-bg: #81c784;
+    --switch-handle: #e2e6ea;
+  }
+  
+  body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  header {
+    padding: 1rem;
+    width: 100%;
+    text-align: right;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--background-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  header .links {
+    position: absolute;
+    transition: 0.8s ease-in;
+    transform-origin: center;
+    animation-duration: 0.8s;
+  }
+  header .links ul {
+    margin-left: 20vw;
+  }
+  header .links ul li {
+    display: inline;
+    list-style: none;
+    margin-left: 25px;
+  }
+  header .links ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: "Montserrat";
+    color: var(--text-color);
+  }
+  header .links ul li a:hover {
+    color: #9ed603;
+    font-size: 1.205rem;
+    font-weight: 500;
+    font-optical-sizing: 3px;
+  }
+  header .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-right: 10vw;
+  }
+  header .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  header .switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--switch-bg);
+    transition: 0.4s;
+    border-radius: 50px; /* Rounded corners for the switch track */
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3); /* Subtle inner shadow */
+  }
+  header .switch .slider::before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--switch-handle);
+    transition: 0.6s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle outer shadow */
+  }
+  
+  input:checked + .slider {
+    background-color: var(--switch-active-bg);
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px); /* Move the handle to the right */
+  }
+  
+  h1, p {
+    text-align: center;
+    margin: 1rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  p {
+    font-size: 1.25rem;
+  }

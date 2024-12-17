@@ -1,0 +1,15 @@
+.idea/
+.vscode/
+.venv*/
+venv*/
+__pycache__/
+dist/
+.coverage*
+htmlcov/
+.tox/
+docs/_build/
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+.env
