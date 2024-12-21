@@ -1,11 +1,15 @@
 {% extends "template.html" %}
+
+{% block title %}Home{% endblock %}
+
 {% block content %}
-
-    <main>
-        <h1>EASTLANDS BRANDS</h1>
-        <p>Here We Are About To Change Themes in <em>HTML</em></p>
-    </main>
-
-    <!-- <img src="{{ url_for('static', filename='assets/Asset 1.png') }}" alt="Error Loading image"> -->
-
-{% endblock content %}
+<div class="hero min-h-screen bg-base-200">
+    <div class="hero-content text-center">
+        <div class="max-w-md">
+            <h1 class="text-5xl font-bold">Welcome to Eastlands Brands!</h1>
+            <p class="py-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore aliquam perspiciatis ratione doloribus ad, hic voluptatem facere.</p>
+            <a href="#" class="btn btn-primary">Get Started</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

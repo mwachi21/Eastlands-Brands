@@ -3,12 +3,12 @@ from flask import Flask, render_template, send_from_directory
 app = Flask(__name__)
 
 @app.route("/")
-def hello_world():
+def index():
     return render_template ('index.html')
 
-@app.route('/static/<path:path>')
-def send_static(path):
-    return send_from_directory('static', path)
+# @app.route('/static/<path:path>')
+# def send_static(path):
+#     return send_from_directory('static', path)
 
 @app.errorhandler(404)
 def not_found(e):

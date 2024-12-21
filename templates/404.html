@@ -1,12 +1,40 @@
-
 {% extends "template.html" %}
+
+{% block head %}
+<script type="text/javascript">
+    var seconds = 6;
+    var url = "{{ url_for('index') }}";
+
+    function redirect() {
+        if (seconds <= 0) {
+            window.location.href = url;
+        } else {
+            // Update the countdown message
+            seconds--;
+            document.getElementById("pageInfo").innerText = 
+                "Redirecting to Home Page after " + seconds + " seconds.";
+
+            // Call redirect() every second
+            setTimeout(redirect, 1000);
+        }
+    }
+
+    window.onload = redirect;
+</script> {% endblock %}
+
 {% block title %}404 - Page Not Found{% endblock %}
+
 {% block content %}
-<h1>
-    'Error'
-</h1>
-    <img src="{{url_for('static', filename='assets/404.gif')}}" width="30%" alt="Image Not Found">
-<p>
-    Page Not Found
-</p>
-{% endblock content %}
+
+<div class="hero bg-base-200 min-h-screen">
+      <div class="h-full">
+        <h1>Error</h1>
+        <img src="{{ url_for('static', filename='assets/imgs/404.gif') }}" width="30%" alt="Error Loading image">
+        <p>Page Not Found</p>
+      
+    </div>
+</div>
+
+
+<div id="pageInfo">Redirecting to Home Page after 6 seconds.</div>
+{% endblock %}
