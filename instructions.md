@@ -1,4 +1,4 @@
-set up with Taliwind CSS with Daisy UI plugin
+Set up Taliwind CSS with Daisy UI plugin
 
 Installing Daisy UI Plugin alongside Tailwind
 
